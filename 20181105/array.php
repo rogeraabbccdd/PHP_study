@@ -1,0 +1,9 @@
+<?php
+$url["main"]="main_2.php";
+$url["admin"]="admin.php";
+$url["login"]="login.php";
+$url["logout"]="logout.php";
+$url["ad_del"]="ad_del.php";
+$url["add_player"]="add_player.php";
+$url["ad_update"]="ad_update.php";
+?>

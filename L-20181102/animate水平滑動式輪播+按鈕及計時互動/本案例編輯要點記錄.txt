@@ -1,0 +1,21 @@
+﻿js目錄夾內
+jquery-2.1.3.min.js---為主要jquery語法,要排第一引用
+jquery-ui.min.js------是要有滑動彈簧效果為jquery-ui,排第二引用
+以上二者不用自已編寫只要用如<script type="text/javascript" src="js/jquery-ui.min.js"></script>引用便可
+my_jquery.js----------則為自已主要編寫之jquery語法
+
+images目錄夾內
+請置放要輪播之圖片,套用時可更名後拷貝貼入使用,數量可變更
+但要編修index.html內容
+
+css目錄夾內
+則是自已編修的CSS樣式表,主要控制外觀,如是否有邊框及陰影及按鈕是方或是圓等樣式參數設定
+其中主要學習的是
+1.如何讓圖片及按鈕,的ul li項目清單,float: left;浮起來,排於左或右方
+2.要配合位置position: absolute;選擇用相對或絶對位置
+3.按鈕的滑鼠滑入色彩是無法只靠CSS設定的,要在CSS指定其名字如"kk",再於my_jquery.js
+中用addClass("kk")來加入class類別指定其名,才能搭配在CSS表中的設定哦
+
+在index.html中
+要注要圖片的ul屬性設定寬要設(例如本案例為10張圖每張圖寬是1000px則應設為1000X10張=10000px)不
+然圖片滑動時會有圖片因橫向寬度不足而無法秀出來哦

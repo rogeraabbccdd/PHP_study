@@ -1,0 +1,68 @@
+1.搜尋
+select 撈取的對象 from 資料表
+撈取的對象中: * 代表所有，如需要撈出多項內容的話以 , 分隔
+
+2.新增
+兩種格式選擇喜歡的
+insert into 資料表 (欄位名稱) value(新增內容)
+選擇想新增資料的欄位名稱及對應輸入的內容
+insert into class 
+(c_c1 ,c_c2 , c_name)value
+(65   ,66     ,"林克"    ),
+(45   ,56     ,"林克1"    );
+
+insert into 資料表 value(新增內容)
+需要按照資料表欄位順序輸入內容，不能多也不能少，不輸入資料的欄位需要輸入NULL
+insert into class value(null,"阿8",98,85)
+
+3.修改
+update 資料表 set 被修改的欄位名稱 = 被修改的內容
+update class set c_c1 = 99 where c_seq = 2
+
+4.刪除
+delete from 資料表
+
+條件  適用於:搜尋、修改、刪除
+where 判斷的對象　判斷的方式　判斷的內容(時間、字串需要標記)
+判斷的方式有：>、<、>=、<=、<>、=6種 其中字串只能用=、<>
+標記 使用的是單引號 ' 或雙引號 "
+where   p_a_seq  >  5
+where   p_a_name = "張三"
+where   p_a_name = '西瓜'
+多個條件 使用AND或是OR分隔
+AND是兩個條件都必須符合
+OR   是兩個條件只需須符合其中一個
+where   p_a_name = '西瓜'  AND p_a_id ='a01'
+where   p_a_name = '西瓜'  or p_a_id ='a01'
+where   p_a_name = '西瓜'  or p_a_name ='張三'
+模糊搜尋
+like %對象%
+%代表不固定
+where   p_a_id like "%c%"
+
+時間格式
+"年-月-日 時:分:秒"
+"2018-10-03 13:01:59"
+資料庫的時間格式是固定的，如果網頁上的顯示有不同需求
+一樣由資料庫的時間撈出來變化成需要的樣子
+例如 10-03-2018
+
+LIMIT  適用於:搜尋、修改、刪除
+SELECT * FROM `class` LIMIT 1
+限制只搜尋出1筆資料
+SELECT * FROM `class` LIMIT 5,3
+限制搜尋第5筆(不含)資料後的3筆資料
+
+排序(預設是遞增  由小到大)
+ORDER BY 對象- 單純做排序
+GROUP BY 對象- 排序時同時群組化(不重複)
+
+如果加上DESC則排序方式顛倒(遞減  由大到小)
+ORDER BY 對象 DESC- 單純做排序
+GROUP BY 對象 DESC- 排序時同時群組化
+
+如果排序條件有兩種以上時，先確定優先順序然後以逗號分隔
+SELECT * FROM `class` WHERE     ORDER BY `c_c2` DESC , `c_c1` DESC    LIMIT
+
+自訂欄位名稱 AS
+SELECT (`c_c1`+`c_c2`)/2 AS 平均成績 FROM `class` WHERE 1

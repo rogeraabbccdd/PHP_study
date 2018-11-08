@@ -1,0 +1,13 @@
+<?php
+    $url["main"]="main_2.php";
+    $url["admin"]="admin.php";
+    $url["login"]="login.php";
+    $url["out"]="out.php";
+    $url["ad_del"]="ad_del.php";
+    $url["ad_add"]="ad_add.php";
+    $url["ad_up"]="ad_up.php";
+    $url["new"]="news_list.php";
+    $url["new_add"]="news_add.php";
+    $url["new_up"]="news_up.php";
+    $url["new_del"]="news_del.php";
+?>

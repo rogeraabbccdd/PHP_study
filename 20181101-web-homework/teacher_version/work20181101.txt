@@ -1,0 +1,18 @@
+作業
+1.簡單點的
+login.php頁面
+做自判斷 $_SESSION["id"] 
+如果$_SESSION["id"]不存在頁面保持原樣
+如果$_SESSION["id"]已存在頁面自動跳頁到admin的頁面(使用URL參數控制呼叫)
+
+function.php頁面
+寫一個function 判斷$_SESSION["id"]是否存在，如不存在自動跳頁到login.php頁面
+
+支援JS語法需跳出PHP的標籤
+<script>document.location.href="路徑";</script>
+echo '<script>document.location.href="路徑";</script>';
+
+2.難一點的
+main.php的URL參數g
+如果有人故意輸入不屬於array範圍中的參數
+網頁跳回main.php且不會有ERROR相關訊息
